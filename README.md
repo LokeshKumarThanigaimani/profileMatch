@@ -58,8 +58,6 @@ Navigate to http://localhost:4200/
 - **Swipe Right** or click **✓ (green)** → Express Interest
 - **Swipe Left** or click **✗ (red)** → Not Interested  
 - **Swipe Up** or click **★ (yellow)** → Add to Shortlist
-- **Search**: Use the search bar to find profiles
-- **Tabs**: Switch between Pending, Accepted, and Shortlisted
 
 ### Profile Detail Screen
 - View complete profile information organized in sections:
@@ -122,7 +120,7 @@ ProfileMatchApp/
 │   │   │   ├── swipe.component.ts      # Swipe screen logic
 │   │   │   ├── swipe.component.html    # Swipe screen UI
 │   │   │   └── swipe.component.scss    # Swipe screen styles
-│   │   ├── view-profile/
+│   │   ├── profile/
 │   │   │   ├── view-profile.component.ts    # Profile detail logic
 │   │   │   ├── view-profile.component.html  # Profile detail UI
 │   │   │   └── view-profile.component.scss  # Profile detail styles
