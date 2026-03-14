@@ -8,7 +8,7 @@ A modern, responsive matrimony profile matching application built with **Angular
 
 ## 🎯 Project Overview
 
-This application was developed as part of a coding assessment for **TVS Matrimony**. It implements a complete profile matching system with swipe gestures, detailed profile views, and localStorage persistence, following a professional matrimony app design pattern.
+This application was developed as part of a coding assessment for **Matrimony**. It implements a complete profile matching system with swipe gestures, detailed profile views, and localStorage persistence, following a professional matrimony app design pattern.
 
 ## ✨ Features
 
@@ -22,8 +22,6 @@ This application was developed as part of a coding assessment for **TVS Matrimon
 - 🎨 **Matrimony UI** - Professional matrimony-themed design
 
 ### UI Components
-- **Header with Search** - Search bar and notification icons
-- **Tabs Section** - Pending, Accepted, Shortlisted tabs
 - **Profile Cards** - Large profile images with online status
 - **Detailed Information** - Location, height, education, profession
 - **Action Buttons** - Reject (✗), Shortlist (★), Accept (✓)
