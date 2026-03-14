@@ -270,7 +270,7 @@ This project is created for educational and assessment purposes.
 ## 📞 Support
 
 For questions or issues:
-- **Email**: lokeshkumar.t@idp.com
+- **Email**: lokeshkumar981121@gmail.com
 
 ---
 
