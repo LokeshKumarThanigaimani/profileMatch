@@ -1,4 +1,4 @@
-# 💑 Profile Match App - Matrimony Swipe Application
+# Profile Match App - Matrimony Swipe Application
 
 A modern, responsive matrimony profile matching application built with **Angular 20** and **Ionic 8**, featuring Tinder-like swipe functionality with a professional matrimony UI design.
 
@@ -6,30 +6,30 @@ A modern, responsive matrimony profile matching application built with **Angular
 ![Ionic](https://img.shields.io/badge/Ionic-8.8.1-blue)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.9.2-blue)
 
-## 🎯 Project Overview
+## Project Overview
 
 This application was developed as part of a coding assessment for **Matrimony**. It implements a complete profile matching system with swipe gestures, detailed profile views, and localStorage persistence, following a professional matrimony app design pattern.
 
-## ✨ Features
+## Features
 
 ### Main Features
-- 🔄 **Swipe Functionality** - Smooth touch-based swipe gestures for profile navigation
-- 👤 **Detailed Profile View** - Comprehensive profile information with sections
-- 💚 **Interest Actions** - Express interest, reject, or shortlist profiles
-- 💾 **LocalStorage** - Persistent data storage without backend
-- 📱 **Responsive Design** - Optimized for mobile, tablet, and desktop
-- ⚡ **Ionic Components** - Built entirely with Ionic UI components
-- 🎨 **Matrimony UI** - Professional matrimony-themed design
+- **Swipe Functionality** - Smooth touch-based swipe gestures for profile navigation
+- **Detailed Profile View** - Comprehensive profile information with sections
+- **Interest Actions** - Express interest, reject, or shortlist profiles
+- **LocalStorage** - Persistent data storage without backend
+- **Responsive Design** - Optimized for mobile, tablet, and desktop
+- **Ionic Components** - Built entirely with Ionic UI components
+- **Matrimony UI** - Professional matrimony-themed design
 
 ### UI Components
 - **Header with Search** - Search bar and notification icons
 - **Tabs Section** - Pending, Accepted, Shortlisted tabs
 - **Profile Cards** - Large profile images with online status
 - **Detailed Information** - Location, height, education, profession
-- **Action Buttons** - Reject (✗), Shortlist (★), Accept (✓)
+- **Action Buttons** - Reject, Shortlist, Accept
 - **Profile Details Page** - Complete profile with multiple sections
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Node.js (v18 or higher)
@@ -41,7 +41,7 @@ This application was developed as part of a coding assessment for **Matrimony**.
 # Navigate to project directory
 cd ProfileMatchApp
 
-# Install dependencies (already done)
+# Install dependencies
 npm install
 
 # Start development server
@@ -51,7 +51,7 @@ ng serve
 Navigate to http://localhost:4200/
 ```
 
-## 🌐 Application URLs
+## Application URLs
 
 Once the dev server is running at `http://localhost:4200`, use these URLs:
 
@@ -62,15 +62,15 @@ Once the dev server is running at `http://localhost:4200`, use these URLs:
 | **View Profile** | [http://localhost:4200/view-profile/:id](http://localhost:4200/view-profile/1) | Detailed profile view (replace `:id` with profile ID, e.g. `1`) |
 | **Matches** | [http://localhost:4200/matches](http://localhost:4200/matches) | View matched profiles |
 
-> **Tip:** The default URL `/` automatically redirects to `/swipe`, so just opening `http://localhost:4200/` will take you to the swipe screen.
+> **Note:** The default URL `/` automatically redirects to `/swipe`, so just opening `http://localhost:4200/` will take you to the swipe screen.
 
-## 📱 How to Use
+## How to Use
 
 ### Swipe Screen
 - **View Profile**: Tap on the profile image or chevron icon
-- **Swipe Right** or click **✓ (green)** → Express Interest
-- **Swipe Left** or click **✗ (red)** → Not Interested  
-- **Swipe Up** or click **★ (yellow)** → Add to Shortlist
+- **Swipe Right** or click **green button** → Express Interest
+- **Swipe Left** or click **red button** → Not Interested
+- **Swipe Up** or click **yellow button** → Add to Shortlist
 - **Search**: Use the search bar to find profiles
 - **Tabs**: Switch between Pending, Accepted, and Shortlisted
 
@@ -85,7 +85,7 @@ Once the dev server is running at `http://localhost:4200`, use these URLs:
 - **Not Interested** button to reject
 - **Back button** to return to swipe screen
 
-## 🎨 UI Design
+## UI Design
 
 The application follows a professional matrimony app design with:
 
@@ -113,7 +113,7 @@ The application follows a professional matrimony app design with:
   - Contact Preferences
 - Footer with action buttons
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 | Technology | Version | Purpose |
 |------------|---------|---------|
@@ -123,7 +123,7 @@ The application follows a professional matrimony app design with:
 | HammerJS | 2.0.8 | Touch Gestures |
 | SCSS | - | Styling |
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 ProfileMatchApp/
@@ -172,7 +172,7 @@ ProfileMatchApp/
 └── tsconfig.spec.json                       # Test TS config
 ```
 
-## 💾 Data Management
+## Data Management
 
 ### Profile Structure
 ```typescript
@@ -206,19 +206,19 @@ interface Profile {
 - Managed through `ProfileService`
 - Data persists across browser sessions
 
-## ✅ Requirements Completed
+## Requirements Completed
 
 - [x] Swipe through profiles with touch gestures
 - [x] Navigate to profile detail on photo/button tap
-- [x] Right swipe/tick → "✓ Interested" toast → Next profile
-- [x] Left swipe/cross → "✗ Not Interested" toast → Next profile
-- [x] Swipe up/star → "★ Shortlisted" toast → Next profile
+- [x] Right swipe/tick → "Interested" toast → Next profile
+- [x] Left swipe/cross → "Not Interested" toast → Next profile
+- [x] Swipe up/star → "Shortlisted" toast → Next profile
 - [x] Profile data stored in localStorage (not hardcoded)
 - [x] Only Ionic components used (no plain HTML tags)
 - [x] Responsive design for mobile and desktop
 - [x] Professional matrimony UI design
 
-## 🧪 Testing
+## Testing
 
 ```bash
 # Run unit tests
@@ -231,13 +231,13 @@ ng build --configuration production
 dist/ProfileMatchApp/
 ```
 
-## 📱 Responsive Breakpoints
+## Responsive Breakpoints
 
 - **Mobile**: < 768px - Optimized touch interface
 - **Tablet**: 768px - 1024px - Adaptive layout
 - **Desktop**: > 1024px - Full-width experience
 
-## 🎨 Customization
+## Customization
 
 ### Theme Colors
 Edit `src/styles.scss`:
@@ -253,14 +253,7 @@ Edit `src/styles.scss`:
 ### Add New Profiles
 Edit `src/app/services/profile.service.ts` and add to `defaultProfiles` array.
 
-## 📚 Documentation
-
-- **[PROJECT_README.md](PROJECT_README.md)** - Comprehensive documentation
-- **[SETUP_GUIDE.md](SETUP_GUIDE.md)** - Quick setup guide
-- **[IMPLEMENTATION_SUMMARY.md](IMPLEMENTATION_SUMMARY.md)** - Implementation details
-- **[SUBMISSION_CHECKLIST.md](SUBMISSION_CHECKLIST.md)** - Submission checklist
-
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### App doesn't start
 ```bash
@@ -277,7 +270,7 @@ ng serve --open
 - Clear browser cache and localStorage
 - Refresh the page
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 - Backend API integration
 - User authentication
@@ -288,32 +281,23 @@ ng serve --open
 - Push notifications
 - Match algorithm
 
-## 👨💍 Developer
+## Developer
 
 **Lokesh Kumar**
 - Email: lokeshkumar981121@gmail.com
 - Project: Matrimony Coding Assessment
 - Date: March 2026
 
-## 📄 License
+## License
 
 This project is created for educational and assessment purposes.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
-- Angular Team for the amazing framework
-- Ionic Team for beautiful UI components
-- TVS Matrimony for the opportunity
-
----
-
-## 📞 Support
-
-For questions or issues:
-- **Email**: lokeshkumar981121@gmail.com
+- Angular Team for the framework
+- Ionic Team for UI components
+- Matrimony for the opportunity
 
 ---
 
-**Made with ❤️ for Matrimony**
-
-⭐ Star this repo if you find it helpful!
+For questions or issues, contact: lokeshkumar981121@gmail.com
