@@ -8,7 +8,7 @@ A modern, responsive matrimony profile matching application built with **Angular
 
 ## 🎯 Project Overview
 
-This application was developed as part of a coding assessment for **Matrimony**. It implements a complete profile matching system with swipe gestures, detailed profile views, and localStorage persistence, following a professional matrimony app design pattern.
+This application was developed as part of a coding assessment for **TVS Matrimony**. It implements a complete profile matching system with swipe gestures, detailed profile views, and localStorage persistence, following a professional matrimony app design pattern.
 
 ## ✨ Features
 
@@ -22,6 +22,8 @@ This application was developed as part of a coding assessment for **Matrimony**.
 - 🎨 **Matrimony UI** - Professional matrimony-themed design
 
 ### UI Components
+- **Header with Search** - Search bar and notification icons
+- **Tabs Section** - Pending, Accepted, Shortlisted tabs
 - **Profile Cards** - Large profile images with online status
 - **Detailed Information** - Location, height, education, profession
 - **Action Buttons** - Reject (✗), Shortlist (★), Accept (✓)
@@ -49,6 +51,19 @@ ng serve
 Navigate to http://localhost:4200/
 ```
 
+## 🌐 Application URLs
+
+Once the dev server is running at `http://localhost:4200`, use these URLs:
+
+| Page | URL | Description |
+|------|-----|-------------|
+| **Home (Default)** | [http://localhost:4200/](http://localhost:4200/) | Redirects to Swipe page |
+| **Swipe Profiles** | [http://localhost:4200/swipe](http://localhost:4200/swipe) | Main swipe screen to browse profiles |
+| **View Profile** | [http://localhost:4200/view-profile/:id](http://localhost:4200/view-profile/1) | Detailed profile view (replace `:id` with profile ID, e.g. `1`) |
+| **Matches** | [http://localhost:4200/matches](http://localhost:4200/matches) | View matched profiles |
+
+> **Tip:** The default URL `/` automatically redirects to `/swipe`, so just opening `http://localhost:4200/` will take you to the swipe screen.
+
 ## 📱 How to Use
 
 ### Swipe Screen
@@ -56,6 +71,8 @@ Navigate to http://localhost:4200/
 - **Swipe Right** or click **✓ (green)** → Express Interest
 - **Swipe Left** or click **✗ (red)** → Not Interested  
 - **Swipe Up** or click **★ (yellow)** → Add to Shortlist
+- **Search**: Use the search bar to find profiles
+- **Tabs**: Switch between Pending, Accepted, and Shortlisted
 
 ### Profile Detail Screen
 - View complete profile information organized in sections:
@@ -112,22 +129,47 @@ The application follows a professional matrimony app design with:
 ProfileMatchApp/
 ├── src/
 │   ├── app/
+│   │   ├── assets/                          # Reference images
+│   │   │   ├── Ionic-Search-Swipe.png
+│   │   │   ├── Ionic-View-Profile.png
+│   │   │   └── Swipe-screen.png
+│   │   ├── pages/
+│   │   │   ├── matches/
+│   │   │   │   ├── matches.html             # Matches page UI
+│   │   │   │   ├── matches.scss             # Matches page styles
+│   │   │   │   ├── matches.spec.ts          # Matches page tests
+│   │   │   │   └── matches.ts               # Matches page logic
+│   │   │   ├── profile/
+│   │   │   │   ├── profile.html             # Profile detail UI
+│   │   │   │   ├── profile.scss             # Profile detail styles
+│   │   │   │   ├── profile.spec.ts          # Profile detail tests
+│   │   │   │   └── profile.ts               # Profile detail logic
+│   │   │   └── swipe/
+│   │   │       ├── swipe.html               # Swipe screen UI
+│   │   │       ├── swipe.scss               # Swipe screen styles
+│   │   │       └── swipe.ts                 # Swipe screen logic
 │   │   ├── services/
-│   │   │   └── profile.service.ts      # Profile data management
-│   │   ├── swipe/
-│   │   │   ├── swipe.component.ts      # Swipe screen logic
-│   │   │   ├── swipe.component.html    # Swipe screen UI
-│   │   │   └── swipe.component.scss    # Swipe screen styles
-│   │   ├── profile/
-│   │   │   ├── view-profile.component.ts    # Profile detail logic
-│   │   │   ├── view-profile.component.html  # Profile detail UI
-│   │   │   └── view-profile.component.scss  # Profile detail styles
-│   │   ├── assets/                     # Reference images
-│   │   ├── app.config.ts               # App configuration
-│   │   └── app.routes.ts               # Routing
-│   ├── styles.scss                     # Global Ionic styles
-│   └── main.ts                         # App bootstrap
-└── Documentation files
+│   │   │   └── profile.service.ts           # Profile data management
+│   │   ├── app.config.ts                    # App configuration
+│   │   ├── app.html                         # Root app template
+│   │   ├── app.routes.ts                    # Routing configuration
+│   │   ├── app.scss                         # App-level styles
+│   │   ├── app.spec.ts                      # App tests
+│   │   └── app.ts                           # Root app component
+│   ├── index.html                           # Main HTML entry
+│   ├── main.ts                              # App bootstrap
+│   └── styles.scss                          # Global Ionic styles
+├── public/                                  # Static assets
+├── .editorconfig                            # Editor settings
+├── .gitignore                               # Git ignore rules
+├── angular.json                             # Angular CLI config
+├── ionic.config.json                        # Ionic config
+├── package.json                             # Dependencies
+├── README.md                                # Documentation
+├── START_APP.bat                            # Quick start script
+├── tsconfig.json                            # TypeScript config
+├── tsconfig.app.json                        # App TS config
+└── tsconfig.spec.json                       # Test TS config
 ```
 
 ## 💾 Data Management
@@ -249,8 +291,8 @@ ng serve --open
 ## 👨💍 Developer
 
 **Lokesh Kumar**
-- Email: lokeshkumar.t@idp.com
-- Project: TVS Matrimony Coding Assessment
+- Email: lokeshkumar981121@gmail.com
+- Project: Matrimony Coding Assessment
 - Date: March 2026
 
 ## 📄 License
@@ -272,6 +314,6 @@ For questions or issues:
 
 ---
 
-**Made with ❤️ for TVS Matrimony**
+**Made with ❤️ for Matrimony**
 
 ⭐ Star this repo if you find it helpful!
