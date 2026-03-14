@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="profile-wrapper">
+    <div class="profile-image-container">
+      <ion-img [src]="profile.image"></ion-img>
+      
+      <div class="header-overlay">
+        <ion-buttons>
+          <ion-back-button defaultHref="/matches" color="light" text=""></ion-back-button>
+        </ion-buttons>
+        <span class="profile-id">M9837832</span>
+      </div>
+      
+      <div class="image-indicators">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      
+      <div class="image-counter">2/25</div>
+    </div>
+
+    <ion-card class="profile-details-card">
+      <ion-card-content>
+        <h2 class="profile-name">{{profile.name}}</h2>
+        <p class="profile-info">
+          {{profile.age}} Yrs, {{profile.height}}, {{profile.caste}},<br>
+          {{profile.degree}}, {{profile.job}}, {{profile.city}}, Tamil Nadu, India.
+        </p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+</ion-content>

@@ -1,1 +1,56 @@
-/* You can add global styles to this file, and also import other style files */
+/* ===== Global Ionic Overrides for Swipe Page ===== */
+
+/* Header toolbar - green background */
+app-swipe .header {
+  --background: #4caf50 !important;
+  background: #4caf50 !important;
+  --color: #fff !important;
+  color: #fff !important;
+}
+
+app-swipe .header ion-title {
+  color: #fff !important;
+}
+
+app-swipe .header ion-back-button {
+  --color: #fff !important;
+}
+
+/* Content background - green like target */
+app-swipe .swipe-bg {
+  --background: #4caf50 !important;
+}
+
+/* Accept button - force orange with multiple selectors */
+app-swipe .accept-btn,
+app-swipe ion-button.accept-btn {
+  --background: #ff9500 !important;
+  background: #ff9500 !important;
+  --color: #fff !important;
+  color: #fff !important;
+}
+
+app-swipe .accept-btn::part(native),
+app-swipe ion-button.accept-btn::part(native) {
+  background: #ff9500 !important;
+  color: #fff !important;
+}
+
+app-swipe .accept-btn ion-icon,
+app-swipe ion-button.accept-btn ion-icon {
+  color: #fff !important;
+}
+
+/* Profile card - ensure white background */
+app-swipe .profile-card {
+  background: #fff !important;
+  --background: #fff !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+app-swipe ion-card-content {
+  background: #fff !important;
+  --background: #fff !important;
+}

@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar class="header">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/matches" color="light" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title color="light">Daily Recommendations</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="swipe-bg">
+
+  @if (toastVisible) {
+    <div class="custom-toast" [class]="'custom-toast ' + toastType">
+      <span>{{ toastMessage }}</span>
+    </div>
+  }
+
+  @if (currentProfile) {
+    <div class="card-container">
+      <ion-card class="profile-card" #cardRef>
+        <div class="card-image" (click)="viewProfile()">
+          <img [src]="currentProfile.image" [alt]="currentProfile.name" />
+          <div class="image-count">
+            <ion-icon name="images-outline"></ion-icon>
+            {{ currentProfile.imageCount || 15 }}
+          </div>
+        </div>
+
+        <ion-card-content>
+          <div class="profile-badges">
+            <span class="badge verified">
+              <ion-icon name="checkmark-circle"></ion-icon> Verified
+            </span>
+            <span class="badge premium">
+              <ion-icon name="heart-circle"></ion-icon> Premium NRI
+            </span>
+          </div>
+
+          <h2 class="profile-name">{{ currentProfile.name }}</h2>
+
+          <p class="profile-details">
+            {{ currentProfile.age }} Yrs, {{ currentProfile.height }}, {{ currentProfile.degree }}, {{ currentProfile.job }}, {{ currentProfile.city }}, {{ currentProfile.caste }}, {{ currentProfile.location }}
+          </p>
+
+          <div class="action-buttons">
+            <ion-button fill="outline" class="shortlist-btn" (click)="shortlistBtn()">
+              <ion-icon name="star-outline" slot="start"></ion-icon>
+              Shortlist
+            </ion-button>
+
+            <div class="like-actions">
+              <span class="like-text">Like her?</span>
+              <ion-button fill="outline" class="reject-btn" (click)="rejectBtn()">
+                <ion-icon name="close" slot="icon-only"></ion-icon>
+              </ion-button>
+              <ion-button fill="solid" class="accept-btn" (click)="acceptBtn()">
+                <ion-icon name="checkmark" slot="icon-only"></ion-icon>
+              </ion-button>
+            </div>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  } @else {
+    <div class="no-profiles">
+      <div class="no-profiles-text">No more profiles available!</div>
+    </div>
+  }
+
+</ion-content>

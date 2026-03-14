@@ -1,0 +1,129 @@
+.profile-image-container{
+  position:relative;
+  width:100%;
+  background:#333;
+  max-width:100%;
+  margin:0 auto;
+}
+
+.profile-image-container ion-img{
+  height:450px;
+  max-height:450px;
+  object-fit:cover;
+  width:100%;
+  display:block;
+}
+
+@media (min-width:768px){
+  .profile-wrapper{
+    max-width:600px;
+    margin:0 auto;
+  }
+  
+  .profile-image-container{
+    max-width:100%;
+  }
+  
+  .profile-image-container ion-img{
+    height:500px;
+    max-height:500px;
+  }
+  
+  .profile-details-card{
+    max-width:100%;
+    margin-left:0;
+    margin-right:0;
+  }
+}
+
+.header-overlay{
+  position:absolute;
+  top:16px;
+  left:10px;
+  z-index:10;
+  display:flex;
+  align-items:center;
+  gap:4px;
+}
+
+.header-overlay ion-buttons{
+  --background:transparent;
+}
+
+.header-overlay ion-back-button{
+  --background:transparent;
+  --color:white;
+  --icon-font-size:24px;
+}
+
+.header-overlay ion-back-button::part(native){
+  background:transparent;
+  box-shadow:none;
+}
+
+.profile-id{
+  color:white;
+  font-size:16px;
+  font-weight:600;
+  text-shadow:0 1px 3px rgba(0,0,0,0.5);
+}
+
+.image-indicators{
+  position:absolute;
+  bottom:40px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  gap:6px;
+  z-index:10;
+}
+
+.dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.5);
+}
+
+.dot.active{
+  background:white;
+}
+
+.image-counter{
+  position:absolute;
+  bottom:12px;
+  right:12px;
+  color:white;
+  font-size:13px;
+  font-weight:500;
+  z-index:10;
+  text-shadow:0 1px 3px rgba(0,0,0,0.5);
+}
+
+.profile-details-card{
+  margin:0;
+  border-radius:24px 24px 0 0;
+  margin-top:-24px;
+  position:relative;
+  z-index:5;
+  box-shadow:0 -4px 10px rgba(0,0,0,0.1);
+  width:100%;
+}
+
+.profile-details-card ion-card-content{
+  padding:28px 24px;
+}
+
+.profile-name{
+  font-size:26px;
+  font-weight:700;
+  margin:0 0 12px 0;
+  color:#000;
+}
+
+.profile-info{
+  font-size:15px;
+  color:#555;
+  line-height:1.7;
+  margin:0;
+}

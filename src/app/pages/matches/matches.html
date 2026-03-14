@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar class="header">
+    <ion-title>My Matches</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="matches-bg">
+
+  <div class="my-matches-text">
+    <h1>My Matches</h1>
+  </div>
+
+  <div class="title-area">
+    <h2>8 Profiles pending with me</h2>
+    <span class="badge">5 NEW</span>
+  </div>
+
+  <div class="cards-wrapper">
+    <div class="cards" #cardsContainer>
+      @for (profile of getVisibleProfiles(); track $index; let i = $index) {
+      <ion-card class="profile-card">
+        <ion-img [src]="profile.image" (click)="viewProfile(profile)"></ion-img>
+        <ion-card-content>
+          <div class="details">
+            <h2>{{profile.name}}</h2>
+            <p>
+              {{profile.age}} Yrs,
+              {{profile.height}},
+              {{profile.caste}},
+              {{profile.degree}},
+              {{profile.job}},
+              {{profile.city}}
+            </p>
+          </div>
+          <div class="buttons">
+            <ion-button shape="round" size="small" class="yes-btn" (click)="viewProfile(profile)">
+              Yes
+            </ion-button>
+            <ion-button fill="outline" shape="round" size="small" class="no-btn" (click)="notInterested()">
+              No
+            </ion-button>
+          </div>
+        </ion-card-content>
+      </ion-card>
+      }
+    </div>
+  </div>
+</ion-content>
